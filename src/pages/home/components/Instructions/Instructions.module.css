@@ -1,0 +1,32 @@
+.instructions {
+  max-width: 600px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.instructions h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.steps {
+  padding-left: 2rem;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.steps li {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .instructions {
+    padding: 0.5rem;
+  }
+  
+  .steps {
+    padding-left: 1.5rem;
+  }
+} 

@@ -1,0 +1,118 @@
+:root {
+  /* 主题颜色 */
+  --primary-color: #FF69B4;    /* 主色调-浪漫粉 */
+  --text-color: #333333;       /* 文字颜色-深灰 */
+  --bg-color: #FFFFFF;         /* 背景色-纯白 */
+  --accent-color: #9370DB;     /* 强调色-紫色 */
+  
+  /* 布局尺寸 */
+  --max-width: 1280px;         /* 最大内容宽度 */
+  --button-height: 60px;       /* 按钮高度 */
+  --border-radius: 8px;        /* 圆角大小 */
+  --transition-time: 0.25s;    /* 过渡动画时长 */
+
+  /* 基础字体设置 */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  /* 基础颜色设置 */
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  /* 字体渲染优化 */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 页面基础布局 */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* 根容器样式 */
+#root {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* 标题样式 */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+/* 按钮基础样式 */
+button {
+  height: var(--button-height);
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: all var(--transition-time);
+}
+
+/* 按钮悬停效果 */
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  border-color: var(--accent-color);
+}
+
+/* 按钮焦点状态 */
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--accent-color);
+}
+
+/* 页面加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 为所有主要内容添加淡入动画 */
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  #root {
+    padding: 1rem;
+  }
+  
+  button {
+    width: 80%;
+    max-width: 300px;
+  }
+} 
